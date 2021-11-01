@@ -1,0 +1,2 @@
+module DudsHelper
+end
