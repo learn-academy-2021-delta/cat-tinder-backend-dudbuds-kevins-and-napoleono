@@ -1,0 +1,2 @@
+class DudsController < ApplicationController
+end
