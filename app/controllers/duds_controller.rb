@@ -6,28 +6,28 @@ class DudsController < ApplicationController
     end
   
     def create
-        dud = Dud.create(dud_params)
-    if dud.valid?
-      render json: dud
-    else
-      render json: dud.errors, status: 422
-    end
+      dud = Dud.create(dud_params)
+      if dud.valid?
+        render json: dud
+      else
+        render json: dud.errors, status: 422
+      end
     end
   
     def update
-        dud = Dud.find(params[:id])
-        dud.update(dud_params)
-    if dud.valid?
-      render json: dud
-    else
-      render json: dud.errors, status: 422
-    end
+      dud = Dud.find(params[:id])
+      dud.update(dud_params)
+      if dud.valid?
+        render json: dud
+      else
+        render json: dud.errors, status: 422
+      end
     end
   
     def destroy
-        dud = Dud.find(params[:id])
-        dud.destroy
-        render json: dud
+      dud = Dud.find(params[:id])
+      dud.destroy
+      render json: dud
     end
   
     private
